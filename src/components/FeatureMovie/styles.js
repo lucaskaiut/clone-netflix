@@ -6,6 +6,10 @@ export const Container = styled.section`
   background-size: cover;
   background-position: center;
   background-image: url('https://image.tmdb.org/t/p/original${props => props.backdropPath}');
+
+  @media (max-width: 760px){
+    height: 90vh;
+  }
 `;
 
 export const FeaturedVertical = styled.div`
@@ -33,6 +37,9 @@ export const FeaturedHorizontal = styled.div`
 export const FeaturedName = styled.div`
   font-size: 60px;
   font-weight: bold;
+  @media (max-width: 760px){
+    font-size: 40px;
+  }
 `;
 
 export const FeaturedInfo = styled.div`
@@ -48,6 +55,10 @@ export const FeaturedInfo = styled.div`
   div:first-child{
     color: #46d369;
   }
+
+  @media (max-width: 760px){
+    font-size: 16px;
+  }
 `;
 
 export const FeaturedDescription = styled.div`
@@ -55,6 +66,12 @@ export const FeaturedDescription = styled.div`
   font-size: 20px;
   color: #999;
   max-width: 40%;
+
+  @media (max-width: 760px){
+    font-size: 14px;
+    max-width: 100%;
+    margin-right: 30px;
+  }
 `;
 
 export const FeaturedButtons = styled.div`
@@ -85,10 +102,18 @@ export const FeaturedButtons = styled.div`
     background-color: #333;
     color: #fff;
   }
+
+  @media (max-width: 760px){
+    font-size: 16px;
+  }
 `;
 
 export const FeaturedGenres = styled.div`
   margin-top: 15px;
   font-size: 18px;
   color: #999;
+
+  @media (max-width: 760px){
+    font-size: 16px;
+  }
 `;

@@ -21,6 +21,12 @@ function FeatureMovie({ item: movie }) {
     genres.push(movie.genres[i].name);
   }
 
+  let description = movie.overview;
+
+  if(description.length > 200){
+    description = description.substring(0, 200)+'...';
+  }
+
   return (
     <Container backdropPath={movie.backdrop_path}>
       <FeaturedVertical>
@@ -31,7 +37,7 @@ function FeatureMovie({ item: movie }) {
             <div>{firstDate.getFullYear()}</div>
             <div>{movie.number_of_seasons} temporada{movie.number_of_seasons !== 1 ? 's' : ''}</div>
           </FeaturedInfo>
-          <FeaturedDescription>{movie.overview}</FeaturedDescription>
+          <FeaturedDescription>{description}</FeaturedDescription>
           <FeaturedButtons>
             <a href={`/watch/${movie.id}`} className="featuredWatchButton">► Assistir</a>
             <a href={`/wishlist/add/${movie.id}`} className="featuredAddButton">+ Minha Lista</a>

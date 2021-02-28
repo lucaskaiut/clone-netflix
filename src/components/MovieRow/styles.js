@@ -27,6 +27,13 @@ export const Container = styled.div`
   &:hover .rightIcon, &:hover .leftIcon{
     opacity: 1
   }
+
+  @media (max-width: 760px){
+    .rightIcon, .leftIcon {
+      opacity: 1;
+    }
+  }
+
 `;
 
 export const MovieRowListArea = styled.div`
