@@ -37,8 +37,12 @@ export const Container = styled.div`
 `;
 
 export const MovieRowListArea = styled.div`
-  overflow-x: hidden;
+  overflow-x: scroll;
   padding-left: 30px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
 `;
 
