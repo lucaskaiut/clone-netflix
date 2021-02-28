@@ -14,7 +14,7 @@ import {
 
 export default function MovieRow({ title, movies }) {
 
-  const [scrollX, setScrollX] = useState(-400);
+  const [scrollX, setScrollX] = useState(0);
 
   const handleLeftArrow = () => {
     let x = scrollX + Math.round(window.innerWidth / 3);
